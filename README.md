@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+React Animate Load
+react-animate-load is a lightweight and customizable React component for creating beautiful loading animations. Easily integrate it into your projects to enhance user experience during loading states.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Installation
+You can install the package using npm or yarn:
 
-## Available Scripts
+bash
+Copy code
+npm install react-animate-load
+Or with yarn:
 
-In the project directory, you can run:
+bash
+Copy code
+yarn add react-animate-load
+Usage
+Import the AnimateLoad component and use it in your React application:
 
-### `npm start`
+jsx
+Copy code
+import React from 'react';
+import AnimateLoad from 'react-animate-load';
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+function App() {
+return (
+<div className="App">
+<h1>Welcome to My App</h1>
+<AnimateLoad
+        animation="spinner"
+        size={50}
+        color="#3498db"
+        duration={1000}
+      />
+</div>
+);
+}
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+export default App;
+Props
+Prop Type Default Description
+animation string 'spinner' Type of animation. Options: 'spinner', 'pulse', 'wave', etc.
+size number 40 Size of the animation (in pixels).
+color string '#000' Color of the animation.
+duration number 800 Duration of one animation cycle in milliseconds.
+Customization
+You can customize the loading animation by passing different props for animation, size, color, and duration. Combine these to fit your design needs.
 
-### `npm test`
+Example
+Here’s an example with multiple animations:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+jsx
+Copy code
+import React from 'react';
+import AnimateLoad from 'react-animate-load';
 
-### `npm run build`
+function LoaderExamples() {
+return (
+<div>
+<h2>Loading Animations</h2>
+<AnimateLoad animation="spinner" size={40} color="#e74c3c" duration={800} />
+<AnimateLoad animation="pulse" size={60} color="#2ecc71" duration={1200} />
+<AnimateLoad animation="wave" size={50} color="#9b59b6" duration={1000} />
+</div>
+);
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default LoaderExamples;
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request with your ideas or bug fixes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
