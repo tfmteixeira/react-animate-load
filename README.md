@@ -6,13 +6,13 @@ Animate Load is a lightweight React component for creating animated loading plac
 
 You can install the library via npm or yarn:
 
-```
+```bash
 npm install react-animate-load
 ```
 
 or
 
-```
+```bash
 yarn add react-animate-load
 ```
 
@@ -20,7 +20,7 @@ yarn add react-animate-load
 
 Here's a basic example of how to use the Animate Load component in your React project:
 
-```
+```tsx
 import { AnimateLoad, AnimationEffect, Align } from "react-animate-load";
 
 <AnimateLoad /> // Using the default values
@@ -69,20 +69,19 @@ These examples cover the usage of various props to customize the Animate Load co
 
 There are two animations effects that can be used:
 
-```
+```tsx
 import { AnimateLoad, AnimationEffect } from "react-animate-load";
 
 <AnimateLoad animation={AnimationEffect.PULSE} /> // Using the pulse animation
 
 <AnimateLoad animation={AnimationEffect.WAVE} /> // Using the wave animation
-
 ```
 
 ### Number of rows
 
 You can customize the number of animated rows using the numRows prop:
 
-```
+```tsx
 import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad numRows={3} /> // Displaying 3 animated rows
@@ -94,7 +93,7 @@ import { AnimateLoad } from "react-animate-load";
 
 Adjust the gap between the rows using the gapRow prop:
 
-```
+```tsx
 import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad gapRow="8px" /> // 8px gap between rows
@@ -106,7 +105,7 @@ import { AnimateLoad } from "react-animate-load";
 
 Control whether the rows have rounded corners with the roundCorner prop:
 
-```
+```tsx
 import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad roundCorner={true} /> // Rows with rounded corners
@@ -118,7 +117,7 @@ import { AnimateLoad } from "react-animate-load";
 
 Customize the dimensions and alignment of individual rows using the customRows and align props:
 
-```
+```tsx
 import { AnimateLoad, Align } from "react-animate-load";
 
 const customRows = [
@@ -140,7 +139,7 @@ const customRows = [
 
 Create a round loading placeholder with the round prop:
 
-```
+```tsx
 import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad round={true} /> // Round placeholder
@@ -152,7 +151,7 @@ import { AnimateLoad } from "react-animate-load";
 
 Change the primary and secondary colors of the animation with primaryColor and secondaryColor props:
 
-```
+```tsx
 import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad primaryColor="#3498db" secondaryColor="#2980b9" /> // Blue shades animation
@@ -166,20 +165,22 @@ import { AnimateLoad } from "react-animate-load";
 
 Override the container’s styles using the containerStyle prop:
 
-```
+```tsx
 import { AnimateLoad } from "react-animate-load";
 
-<AnimateLoad containerStyle={{ backgroundColor: "#f4f4f4", padding: "10px" }} /> // Custom container styles
+<AnimateLoad
+  containerStyle={{ backgroundColor: "#f4f4f4", padding: "10px" }}
+/>; // Custom container styles
 ```
 
 #### Row styles
 
 Override the styles of individual rows using the rowStyle prop:
 
-```
+```tsx
 import { AnimateLoad } from "react-animate-load";
 
-<AnimateLoad rowStyle={{ borderRadius: "8px", marginBottom: "10px" }} /> // Custom row styles
+<AnimateLoad rowStyle={{ borderRadius: "8px", marginBottom: "10px" }} />; // Custom row styles
 ```
 
 ## Contributing
