@@ -1,71 +1,195 @@
-React Animate Load
-react-animate-load is a lightweight and customizable React component for creating beautiful loading animations. Easily integrate it into your projects to enhance user experience during loading states.
+# Animate Load
 
-Installation
-You can install the package using npm or yarn:
+Animate Load is a lightweight React component for creating animated loading placeholders that automatically adapt to your app.
 
-bash
-Copy code
+## Installation
+
+You can install the library via npm or yarn:
+
+```
 npm install react-animate-load
-Or with yarn:
+```
 
-bash
-Copy code
+or
+
+```
 yarn add react-animate-load
-Usage
-Import the AnimateLoad component and use it in your React application:
+```
 
-jsx
-Copy code
-import React from 'react';
-import AnimateLoad from 'react-animate-load';
+## Usage
 
-function App() {
-return (
-<div className="App">
-<h1>Welcome to My App</h1>
+Here's a basic example of how to use the Animate Load component in your React project:
+
+```
+import { AnimateLoad, AnimationEffect, Align } from "react-animate-load";
+
+<AnimateLoad /> // Using the default values
+
+<AnimateLoad numRows={3}/> // Three lines loading skeleton
+
 <AnimateLoad
-        animation="spinner"
-        size={50}
-        color="#3498db"
-        duration={1000}
-      />
-</div>
-);
-}
+      animation={AnimationEffect.PULSE}
+      numRows={3}
+      gapRow="10px"
+      roundCorner={true}
+      primaryColor="#e2e2e2"
+      secondaryColor="#c8c8c8"
+      align={Align.CENTER}
+      customRows={[
+        { index: 0, width: "100%", height: "20px" },
+        { index: 1, width: "80%", height: "20px" },
+        { index: 2, width: "60%", height: "20px" },
+      ]}
+    /> // Full customized loading
+```
 
-export default App;
-Props
-Prop Type Default Description
-animation string 'spinner' Type of animation. Options: 'spinner', 'pulse', 'wave', etc.
-size number 40 Size of the animation (in pixels).
-color string '#000' Color of the animation.
-duration number 800 Duration of one animation cycle in milliseconds.
-Customization
-You can customize the loading animation by passing different props for animation, size, color, and duration. Combine these to fit your design needs.
+The default width and height is the same as his parent component
 
-Example
-Here’s an example with multiple animations:
+## Props
 
-jsx
-Copy code
-import React from 'react';
-import AnimateLoad from 'react-animate-load';
+| Prop Name        | Type                  | Default Value           | Description                                                 |
+| ---------------- | --------------------- | ----------------------- | ----------------------------------------------------------- |
+| `animation`      | `AnimationEffect`     | `AnimationEffect.PULSE` | The type of animation to apply (`PULSE` or `WAVE`).         |
+| `numRows`        | `number`              | `1`                     | The number of animated rows to display.                     |
+| `customRows`     | `CustomRow[]`         | `[]`                    | Array to define custom dimensions for specific rows.        |
+| `gapRow`         | `string`              | `"4px"`                 | Gap between the rows.                                       |
+| `roundCorner`    | `boolean`             | `true`                  | Whether the rows should have rounded corners.               |
+| `round`          | `boolean`             | `false`                 | Whether the placeholder should be round.                    |
+| `containerStyle` | `React.CSSProperties` | `{}`                    | Custom styles for the container.                            |
+| `rowStyle`       | `React.CSSProperties` | `{}`                    | Custom styles for the individual rows.                      |
+| `primaryColor`   | `string`              | `"#e2e2e2"`             | Primary color used for the loading animation.               |
+| `secondaryColor` | `string`              | `"#c8c8c8"`             | Secondary color used for the loading animation.             |
+| `align`          | `Align`               | `Align.LEFT`            | Alignment of the animated rows (`LEFT`, `CENTER`, `RIGHT`). |
 
-function LoaderExamples() {
-return (
-<div>
-<h2>Loading Animations</h2>
-<AnimateLoad animation="spinner" size={40} color="#e74c3c" duration={800} />
-<AnimateLoad animation="pulse" size={60} color="#2ecc71" duration={1200} />
-<AnimateLoad animation="wave" size={50} color="#9b59b6" duration={1000} />
-</div>
-);
-}
+## Examples
 
-export default LoaderExamples;
-Contributing
-Contributions are welcome! Please open an issue or submit a pull request with your ideas or bug fixes.
+These examples cover the usage of various props to customize the Animate Load component.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+### Animation Effect
+
+There are two animations effects that can be used:
+
+```
+import { AnimateLoad, AnimationEffect } from "react-animate-load";
+
+<AnimateLoad animation={AnimationEffect.PULSE} /> // Using the pulse animation
+
+<AnimateLoad animation={AnimationEffect.WAVE} /> // Using the wave animation
+
+```
+
+### Number of rows
+
+You can customize the number of animated rows using the numRows prop:
+
+```
+import { AnimateLoad } from "react-animate-load";
+
+<AnimateLoad numRows={3} /> // Displaying 3 animated rows
+
+<AnimateLoad numRows={5} /> // Displaying 5 animated rows
+```
+
+### Gap between rows
+
+Adjust the gap between the rows using the gapRow prop:
+
+```
+import { AnimateLoad } from "react-animate-load";
+
+<AnimateLoad gapRow="8px" /> // 8px gap between rows
+
+<AnimateLoad gapRow="32px" /> // 32px gap between rows
+```
+
+### Round corners
+
+Control whether the rows have rounded corners with the roundCorner prop:
+
+```
+import { AnimateLoad } from "react-animate-load";
+
+<AnimateLoad roundCorner={true} /> // Rows with rounded corners
+
+<AnimateLoad roundCorner={false} /> // Rows with sharp corners
+```
+
+### Customize rows width and height and align rows
+
+Customize the dimensions and alignment of individual rows using the customRows and align props:
+
+```
+import { AnimateLoad, Align } from "react-animate-load";
+
+const customRows = [
+  { index: 0, height: "20px" },
+  { index: 1, width: "80%", height: "10px" },
+  { index: 2, width: "60%" },
+];
+
+<AnimateLoad customRows={customRows} /> // Custom width and height, aligned to left (default value)
+
+<AnimateLoad customRows={customRows} align={Align.LEFT} /> // Custom width and height, aligned to left
+
+<AnimateLoad customRows={customRows} align={Align.CENTER} /> // Custom width and height, aligned to center
+
+<AnimateLoad customRows={customRows} align={Align.RIGHT} /> // Custom width and height, aligned to right
+```
+
+### Round component
+
+Create a round loading placeholder with the round prop:
+
+```
+import { AnimateLoad } from "react-animate-load";
+
+<AnimateLoad round={true} /> // Round placeholder
+
+<AnimateLoad round={false} /> // Regular placeholder
+```
+
+### Animation colors
+
+Change the primary and secondary colors of the animation with primaryColor and secondaryColor props:
+
+```
+import { AnimateLoad } from "react-animate-load";
+
+<AnimateLoad primaryColor="#3498db" secondaryColor="#2980b9" /> // Blue shades animation
+
+<AnimateLoad primaryColor="#f39c12" secondaryColor="#e67e22" /> // Orange shades animation
+```
+
+### Override styles
+
+#### Container styles
+
+Override the container’s styles using the containerStyle prop:
+
+```
+import { AnimateLoad } from "react-animate-load";
+
+<AnimateLoad containerStyle={{ backgroundColor: "#f4f4f4", padding: "10px" }} /> // Custom container styles
+```
+
+#### Row styles
+
+Override the styles of individual rows using the rowStyle prop:
+
+```
+import { AnimateLoad } from "react-animate-load";
+
+<AnimateLoad rowStyle={{ borderRadius: "8px", marginBottom: "10px" }} /> // Custom row styles
+```
+
+## Contributing
+
+Contributions are welcome! See `CONTRIBUTING.md` to get started.
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+---
+
+Happy loading! 🎉
