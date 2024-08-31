@@ -189,7 +189,7 @@ Contributions are welcome! See `CONTRIBUTING.md` to get started.
 
 ## License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/tfmteixeira/react-animate-load?tab=MIT-1-ov-file) file for details.
 
 ---
 
