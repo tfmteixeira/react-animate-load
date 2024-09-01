@@ -84,9 +84,9 @@ You can customize the number of animated rows using the numRows prop:
 ```tsx
 import { AnimateLoad } from "react-animate-load";
 
-<AnimateLoad numRows={3} /> // Displaying 3 animated rows
-
 <AnimateLoad numRows={5} /> // Displaying 5 animated rows
+
+<AnimateLoad numRows={10} /> // Displaying 10 animated rows
 ```
 
 ### Gap between rows
@@ -98,7 +98,7 @@ import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad gapRow="8px" /> // 8px gap between rows
 
-<AnimateLoad gapRow="32px" /> // 32px gap between rows
+<AnimateLoad gapRow="16px" /> // 16px gap between rows
 ```
 
 ### Round corners
@@ -121,9 +121,12 @@ Customize the dimensions and alignment of individual rows using the customRows a
 import { AnimateLoad, Align } from "react-animate-load";
 
 const customRows = [
-  { index: 0, height: "20px" },
-  { index: 1, width: "80%", height: "10px" },
-  { index: 2, width: "60%" },
+  { index: 0, width: "90%" },
+  { index: 1, width: "82%", height: "10px" },
+  // no need to set the index 2 row, it will assume the default values (width: 100%, height: 100%)
+  { index: 3, height: "20px" },
+  { index: 4, width: "95%", height: "30px" },
+  { index: 5, width: "50%" },
 ];
 
 <AnimateLoad customRows={customRows} /> // Custom width and height, aligned to left (default value)
@@ -142,7 +145,7 @@ Create a round loading placeholder with the round prop:
 ```tsx
 import { AnimateLoad } from "react-animate-load";
 
-<AnimateLoad round={true} /> // Round placeholder
+<AnimateLoad round={true} /> // Round placeholder - the width and height of the parent should be equal
 
 <AnimateLoad round={false} /> // Regular placeholder
 ```
@@ -154,9 +157,9 @@ Change the primary and secondary colors of the animation with primaryColor and s
 ```tsx
 import { AnimateLoad } from "react-animate-load";
 
-<AnimateLoad primaryColor="#3498db" secondaryColor="#2980b9" /> // Blue shades animation
+<AnimateLoad primaryColor="#3498db" secondaryColor="#c8c8c8" /> // Blue shades animation
 
-<AnimateLoad primaryColor="#f39c12" secondaryColor="#e67e22" /> // Orange shades animation
+<AnimateLoad primaryColor="#f39c12" secondaryColor="#c8c8c8" /> // Orange shades animation
 ```
 
 ### Override styles
@@ -168,9 +171,7 @@ Override the container’s styles using the containerStyle prop:
 ```tsx
 import { AnimateLoad } from "react-animate-load";
 
-<AnimateLoad
-  containerStyle={{ backgroundColor: "#f4f4f4", padding: "10px" }}
-/>; // Custom container styles
+<AnimateLoad containerStyle={{ border: "solid 1px", padding: "10px" }} />; // Custom container styles
 ```
 
 #### Row styles

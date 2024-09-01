@@ -4,6 +4,7 @@
     "dist",
     "node_modules",
     "src/main.tsx",
+    "assets",
   ],
   "compilerOptions": {
     "module": "esnext",
