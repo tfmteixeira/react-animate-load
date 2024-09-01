@@ -79,7 +79,7 @@ import { AnimateLoad, AnimationEffect } from "react-animate-load";
 <AnimateLoad animation={AnimationEffect.WAVE} /> // Using the wave animation
 ```
 
-![Animation Effect](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/animation-effect.gif?token=GHSAT0AAAAAAB7ZQBGHHYN5X33OIU4FFC3CZWUHMCA)
+![Animation Effect](assets/animation-effect.gif)
 
 ### Number of rows
 
@@ -93,7 +93,7 @@ import { AnimateLoad } from "react-animate-load";
 <AnimateLoad numRows={10} /> // Displaying 10 animated rows
 ```
 
-![Number of rows](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/number-rows.png?token=GHSAT0AAAAAAB7ZQBGH6D4OOR3SQMGYNTWIZWUHMPQ)
+![Number of rows](assets/number-rows.png)
 
 ### Gap between rows
 
@@ -107,7 +107,7 @@ import { AnimateLoad } from "react-animate-load";
 <AnimateLoad gapRow="16px" /> // 16px gap between rows
 ```
 
-![Gap between rows](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/gap-rows.png?token=GHSAT0AAAAAAB7ZQBGGQVO635MIQ7CRWRZGZWUHNGQ)
+![Gap between rows](assets/gap-rows.png)
 
 ### Round corners
 
@@ -121,7 +121,7 @@ import { AnimateLoad } from "react-animate-load";
 <AnimateLoad roundCorner={false} /> // Rows with sharp corners
 ```
 
-![Round corners](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/round-corners.png?token=GHSAT0AAAAAAB7ZQBGHDI5SFNNA5YSDA5WKZWUHOFQ)
+![Round corners](assets/round-corners.png)
 
 ### Customize rows width and height and align rows
 
@@ -148,7 +148,7 @@ const customRows = [
 <AnimateLoad customRows={customRows} align={Align.RIGHT} /> // Custom width and height, aligned to right
 ```
 
-![Custom rows](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/custom-row.png?token=GHSAT0AAAAAAB7ZQBGHQPAFGDCUXU64XK3YZWUHQKQ)
+![Custom rows](assets/custom-row.png)
 
 ### Round component
 
@@ -162,7 +162,7 @@ import { AnimateLoad } from "react-animate-load";
 <AnimateLoad round={false} /> // Regular placeholder
 ```
 
-![Round component](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/round.png?token=GHSAT0AAAAAAB7ZQBGGUYY4DJ4JINF2RJAMZWUHQ4Q)
+![Round component](assets/round.png)
 
 ### Animation colors
 
@@ -176,7 +176,7 @@ import { AnimateLoad } from "react-animate-load";
 <AnimateLoad primaryColor="#f39c12" secondaryColor="#c8c8c8" /> // Orange shades animation
 ```
 
-![Rows color](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/colors.gif?token=GHSAT0AAAAAAB7ZQBGHDS2EI6SDDDSBVST6ZWUHRUA)
+![Rows color](assets/colors.gif)
 
 ### Override styles
 
@@ -200,7 +200,7 @@ import { AnimateLoad } from "react-animate-load";
 <AnimateLoad rowStyle={{ borderRadius: "8px", marginBottom: "10px" }} />; // Custom row styles
 ```
 
-![Override styles](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/override-styles.png?token=GHSAT0AAAAAAB7ZQBGHTTAO6OIXOWDY7QHWZWUHSNA)
+![Override styles](assets/override-styles.png)
 
 ## Contributing
 
