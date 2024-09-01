@@ -2,7 +2,7 @@
 
 Animate Load is a lightweight React component for creating animated loading placeholders that automatically adapt to your app.
 
-![Animate Load Demo](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/intro.gif?token=GHSAT0AAAAAAB7ZQBGGZKIMVDKIQDI7IHPIZWUHKKQ)
+![Animate Load Demo](assets/intro.gif)
 
 ## Installation
 
