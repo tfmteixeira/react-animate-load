@@ -2,6 +2,8 @@
 
 Animate Load is a lightweight React component for creating animated loading placeholders that automatically adapt to your app.
 
+![Animate Load Demo](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/intro.gif?token=GHSAT0AAAAAAB7ZQBGGZKIMVDKIQDI7IHPIZWUHKKQ)
+
 ## Installation
 
 You can install the library via npm or yarn:
@@ -77,6 +79,8 @@ import { AnimateLoad, AnimationEffect } from "react-animate-load";
 <AnimateLoad animation={AnimationEffect.WAVE} /> // Using the wave animation
 ```
 
+![Animation Effect](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/animation-effect.gif?token=GHSAT0AAAAAAB7ZQBGHHYN5X33OIU4FFC3CZWUHMCA)
+
 ### Number of rows
 
 You can customize the number of animated rows using the numRows prop:
@@ -88,6 +92,8 @@ import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad numRows={10} /> // Displaying 10 animated rows
 ```
+
+![Number of rows](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/number-rows.png?token=GHSAT0AAAAAAB7ZQBGH6D4OOR3SQMGYNTWIZWUHMPQ)
 
 ### Gap between rows
 
@@ -101,6 +107,8 @@ import { AnimateLoad } from "react-animate-load";
 <AnimateLoad gapRow="16px" /> // 16px gap between rows
 ```
 
+![Gap between rows](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/gap-rows.png?token=GHSAT0AAAAAAB7ZQBGGQVO635MIQ7CRWRZGZWUHNGQ)
+
 ### Round corners
 
 Control whether the rows have rounded corners with the roundCorner prop:
@@ -112,6 +120,8 @@ import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad roundCorner={false} /> // Rows with sharp corners
 ```
+
+![Round corners](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/round-corners.png?token=GHSAT0AAAAAAB7ZQBGHDI5SFNNA5YSDA5WKZWUHOFQ)
 
 ### Customize rows width and height and align rows
 
@@ -138,6 +148,8 @@ const customRows = [
 <AnimateLoad customRows={customRows} align={Align.RIGHT} /> // Custom width and height, aligned to right
 ```
 
+![Custom rows](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/custom-row.png?token=GHSAT0AAAAAAB7ZQBGHQPAFGDCUXU64XK3YZWUHQKQ)
+
 ### Round component
 
 Create a round loading placeholder with the round prop:
@@ -150,6 +162,8 @@ import { AnimateLoad } from "react-animate-load";
 <AnimateLoad round={false} /> // Regular placeholder
 ```
 
+![Round component](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/round.png?token=GHSAT0AAAAAAB7ZQBGGUYY4DJ4JINF2RJAMZWUHQ4Q)
+
 ### Animation colors
 
 Change the primary and secondary colors of the animation with primaryColor and secondaryColor props:
@@ -161,6 +175,8 @@ import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad primaryColor="#f39c12" secondaryColor="#c8c8c8" /> // Orange shades animation
 ```
+
+![Rows color](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/colors.gif?token=GHSAT0AAAAAAB7ZQBGHDS2EI6SDDDSBVST6ZWUHRUA)
 
 ### Override styles
 
@@ -183,6 +199,8 @@ import { AnimateLoad } from "react-animate-load";
 
 <AnimateLoad rowStyle={{ borderRadius: "8px", marginBottom: "10px" }} />; // Custom row styles
 ```
+
+![Override styles](https://raw.githubusercontent.com/tfmteixeira/react-animate-load/main/assets/override-styles.png?token=GHSAT0AAAAAAB7ZQBGHTTAO6OIXOWDY7QHWZWUHSNA)
 
 ## Contributing
 
