@@ -1,29 +1,27 @@
 {
-  "include": ["src"],
+  "compilerOptions": {
+    "target": "ES2015",
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": true,
+  },
+  "hooks": [
+    "copy-files" 
+  ],
+  "include": [
+    "src/",
+    "src/**/*.module.css"
+  ],
   "exclude": [
     "dist",
     "node_modules",
     "src/main.tsx",
     "assets",
-  ],
-  "compilerOptions": {
-    "module": "esnext",
-    "lib": ["dom", "esnext"],
-    "importHelpers": true,
-    "declaration": true,
-    "declarationDir": "./dist/types",
-    "sourceMap": true,
-    "rootDir": "./src",
-    "outDir": "./dist/esm",
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "moduleResolution": "node",
-    "jsx": "react",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+  ]
 }

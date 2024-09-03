@@ -1,10 +1,8 @@
-import { AnimateLoad } from "./components/animate-load.component";
 import {
+  AnimateLoad,
   AnimateLoadProps,
-  AnimationEffect,
-  Align,
   CustomRow,
 } from "./components/animate-load.component";
 
-export type { AnimateLoadProps, AnimationEffect, Align, CustomRow };
+export type { AnimateLoadProps, CustomRow };
 export { AnimateLoad };

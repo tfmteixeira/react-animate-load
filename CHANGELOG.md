@@ -2,25 +2,16 @@
 
 ### Added
 
-##### Component
+#### Component
 
 - Created the AnimateLoad React component for animating loading placeholders with customizable options.
 
-#### Animations:
-
-- <b>AnimationEffect.PULSE:</b> Adds a pulsing animation to the loading placeholders.
-- <b>AnimationEffect.WAVE:</b> Adds a wave animation to the loading placeholders.
-
-#### Alignment Options:
-
-- <b>Align.LEFT:</b> Aligns the loading placeholders to the left.
-- <b>Align.CENTER:</b> Centers the loading placeholders.
-- <b>Align.RIGHT:</b> Aligns the loading placeholders to the right.
-
 #### Customization:
 
+- <b>Animation (wave or pulse)</b> Adds a wave/pulsing animation to the loading placeholders.
 - <b>Number of Rows (numRows):</b> Set the number of loading placeholder rows.
 - <b>Custom Row Dimensions (customRows):</b> Specify custom width and height for individual rows.
+- <b>Align (left or center or right)</b> Aligns the loading placeholders to the left | center | right.
 - <b>Gap Between Rows (gapRow):</b> Adjust the space between loading placeholder rows.
 - <b>Border Radius (roundCorner and round):</b>
   - <b>roundCorner:</b> Option to round the corners of the loading placeholders.

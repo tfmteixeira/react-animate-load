@@ -4,6 +4,8 @@ Animate Load is a lightweight React component for creating animated loading plac
 
 ![Animate Load Demo](assets/intro.gif)
 
+#### 👉 [Codesand Demo Here ](https://codesandbox.io/p/sandbox/react-animate-load-example-yt4mv8) 👈
+
 ## Installation
 
 You can install the library via npm or yarn:
@@ -23,14 +25,14 @@ yarn add react-animate-load
 Here's a basic example of how to use the Animate Load component in your React project:
 
 ```tsx
-import { AnimateLoad, AnimationEffect, Align } from "react-animate-load";
+import { AnimateLoad, Align } from "react-animate-load";
 
 <AnimateLoad /> // Using the default values
 
 <AnimateLoad numRows={3}/> // Three lines loading skeleton
 
 <AnimateLoad
-      animation={AnimationEffect.PULSE}
+      animation="pulse"
       numRows={3}
       gapRow="10px"
       roundCorner={true}
@@ -45,23 +47,23 @@ import { AnimateLoad, AnimationEffect, Align } from "react-animate-load";
     /> // Full customized loading
 ```
 
-The default width and height is the same as his parent component
+#### The default width and height is the same as his parent component
 
 ## Props
 
-| Prop Name        | Type                  | Default Value           | Description                                                 |
-| ---------------- | --------------------- | ----------------------- | ----------------------------------------------------------- |
-| `animation`      | `AnimationEffect`     | `AnimationEffect.PULSE` | The type of animation to apply (`PULSE` or `WAVE`).         |
-| `numRows`        | `number`              | `1`                     | The number of animated rows to display.                     |
-| `customRows`     | `CustomRow[]`         | `[]`                    | Array to define custom dimensions for specific rows.        |
-| `gapRow`         | `string`              | `"4px"`                 | Gap between the rows.                                       |
-| `roundCorner`    | `boolean`             | `true`                  | Whether the rows should have rounded corners.               |
-| `round`          | `boolean`             | `false`                 | Whether the placeholder should be round.                    |
-| `containerStyle` | `React.CSSProperties` | `{}`                    | Custom styles for the container.                            |
-| `rowStyle`       | `React.CSSProperties` | `{}`                    | Custom styles for the individual rows.                      |
-| `primaryColor`   | `string`              | `"#e2e2e2"`             | Primary color used for the loading animation.               |
-| `secondaryColor` | `string`              | `"#c8c8c8"`             | Secondary color used for the loading animation.             |
-| `align`          | `Align`               | `Align.LEFT`            | Alignment of the animated rows (`LEFT`, `CENTER`, `RIGHT`). |
+| Prop Name        | Type                  | Default Value | Description                                                 |
+| ---------------- | --------------------- | ------------- | ----------------------------------------------------------- |
+| `animation`      | `string`              | `"pulse"`     | The type of animation to apply (`PULSE` or `WAVE`).         |
+| `numRows`        | `number`              | `1`           | The number of animated rows to display.                     |
+| `customRows`     | `CustomRow[]`         | `[]`          | Array to define custom dimensions for specific rows.        |
+| `gapRow`         | `string`              | `"4px"`       | Gap between the rows.                                       |
+| `roundCorner`    | `boolean`             | `true`        | Whether the rows should have rounded corners.               |
+| `round`          | `boolean`             | `false`       | Whether the placeholder should be round.                    |
+| `containerStyle` | `React.CSSProperties` | `{}`          | Custom styles for the container.                            |
+| `rowStyle`       | `React.CSSProperties` | `{}`          | Custom styles for the individual rows.                      |
+| `primaryColor`   | `string`              | `"#e2e2e2"`   | Primary color used for the loading animation.               |
+| `secondaryColor` | `string`              | `"#c8c8c8"`   | Secondary color used for the loading animation.             |
+| `align`          | `Align`               | `Align.LEFT`  | Alignment of the animated rows (`LEFT`, `CENTER`, `RIGHT`). |
 
 ## Examples
 
@@ -72,11 +74,11 @@ These examples cover the usage of various props to customize the Animate Load co
 There are two animations effects that can be used:
 
 ```tsx
-import { AnimateLoad, AnimationEffect } from "react-animate-load";
+import { AnimateLoad } from "react-animate-load";
 
-<AnimateLoad animation={AnimationEffect.PULSE} /> // Using the pulse animation
+<AnimateLoad animation="pulse" /> // Using the pulse animation
 
-<AnimateLoad animation={AnimationEffect.WAVE} /> // Using the wave animation
+<AnimateLoad animation="wave" /> // Using the wave animation
 ```
 
 ![Animation Effect](assets/animation-effect.gif)

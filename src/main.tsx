@@ -1,11 +1,7 @@
 // This file is used to test the component in development mode.
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import {
-  Align,
-  AnimateLoad,
-  AnimationEffect,
-} from "./components/animate-load.component";
+import { AnimateLoad } from "./components/animate-load.component";
 import React from "react";
 
 const styles = {
@@ -74,7 +70,7 @@ const Demo = () => {
               numRows={2}
               gapRow="8px"
               customRows={[{ index: 1, height: "20px", width: "60%" }]}
-              animation={AnimationEffect.WAVE}
+              animation="wave"
             />
           ) : (
             <>
@@ -88,7 +84,7 @@ const Demo = () => {
         {loading ? (
           <AnimateLoad
             numRows={6}
-            animation={AnimationEffect.WAVE}
+            animation="wave"
             customRows={[
               { index: 0, width: "90%" },
               { index: 1, width: "82%" },

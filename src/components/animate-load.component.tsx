@@ -1,16 +1,5 @@
 import React from "react";
-import "./animate-load.styles.css";
-
-export enum AnimationEffect {
-  PULSE = "pulse",
-  WAVE = "wave",
-}
-
-export enum Align {
-  CENTER = "center",
-  LEFT = "left",
-  RIGHT = "right",
-}
+import styles from "./animate-load.module.css";
 
 export interface CustomRow {
   index: number;
@@ -19,7 +8,7 @@ export interface CustomRow {
 }
 
 export interface AnimateLoadProps {
-  animation?: AnimationEffect;
+  animation?: "pulse" | "wave";
   numRows?: number;
   customRows?: CustomRow[];
   gapRow?: string;
@@ -29,7 +18,7 @@ export interface AnimateLoadProps {
   rowStyle?: React.CSSProperties;
   primaryColor?: string;
   secondaryColor?: string;
-  align?: Align;
+  align?: "left" | "center" | "right";
 }
 
 const generateUniqueId = (index: number) => {
@@ -37,7 +26,7 @@ const generateUniqueId = (index: number) => {
 };
 
 const AnimateLoad = ({
-  animation = AnimationEffect.PULSE,
+  animation = "pulse",
   numRows = 1,
   customRows = [],
   gapRow = "4px",
@@ -47,7 +36,7 @@ const AnimateLoad = ({
   round = false,
   containerStyle = {},
   rowStyle = {},
-  align = Align.LEFT,
+  align = "left",
 }: AnimateLoadProps) => {
   const getCustomRow = (index: number) => {
     const customRow = customRows.find((row) => row.index === index);
@@ -56,16 +45,16 @@ const AnimateLoad = ({
 
   return (
     <div
-      className="animateLoadContainer"
+      className={styles.animateLoadContainer}
       style={
         {
           gap: gapRow,
           "--primary-color": primaryColor,
           "--secondary-color": secondaryColor,
           alignItems:
-            align === Align.LEFT
+            align === "left"
               ? "flex-start"
-              : align === Align.RIGHT
+              : align === "right"
               ? "flex-end"
               : "center",
           ...(round && {
@@ -80,7 +69,7 @@ const AnimateLoad = ({
       {Array.from({ length: numRows }).map((_, index) => (
         <div
           key={generateUniqueId(index)}
-          className={`animateLoad ${animation}`}
+          className={`${styles.animateLoad} ${styles[animation]}`}
           style={{
             borderRadius: roundCorner ? "4px" : "0px",
             maxWidth: getCustomRow(index)?.width,
