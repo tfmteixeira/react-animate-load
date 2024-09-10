@@ -1,8 +1,6 @@
 .animateLoadContainer {
   --primary-color: #e2e2e2;
   --secondary-color: #c8c8c8;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

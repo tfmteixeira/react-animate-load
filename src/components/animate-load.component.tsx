@@ -9,6 +9,8 @@ export interface CustomRow {
 
 export interface AnimateLoadProps {
   animation?: "pulse" | "wave";
+  width?: string;
+  height?: string;
   numRows?: number;
   customRows?: CustomRow[];
   gapRow?: string;
@@ -37,6 +39,8 @@ const AnimateLoad = ({
   containerStyle = {},
   rowStyle = {},
   align = "left",
+  width = "100%",
+  height = "100%",
 }: AnimateLoadProps) => {
   const getCustomRow = (index: number) => {
     const customRow = customRows.find((row) => row.index === index);
@@ -60,8 +64,9 @@ const AnimateLoad = ({
           ...(round && {
             borderRadius: "50%",
             aspectRatio: "1/1",
-            height: "auto",
           }),
+          width,
+          height,
           ...containerStyle,
         } as React.CSSProperties & { [key: string]: string | number }
       }

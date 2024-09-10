@@ -1,4 +1,13 @@
-## 1.1.1
+## 2.1.0
+
+### Added
+
+#### Customization:
+
+- <b>Width:</b> Optional prop for the width of the container, overriding the default one value (width:100%)
+- <b>Height:</b> Optional prop for the height of the container, overriding the default one value (height:100%)
+
+## 2.0.0
 
 ### Added
 

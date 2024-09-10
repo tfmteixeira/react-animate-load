@@ -32,6 +32,8 @@ import { AnimateLoad, Align } from "react-animate-load";
 <AnimateLoad numRows={3}/> // Three lines loading skeleton
 
 <AnimateLoad
+      width="500px"
+      height="200px"
       animation="pulse"
       numRows={3}
       gapRow="10px"
@@ -47,12 +49,14 @@ import { AnimateLoad, Align } from "react-animate-load";
     /> // Full customized loading
 ```
 
-#### The default width and height is the same as his parent component
+#### The default width and height is the same as his parent component, but it is possible to change them using props
 
 ## Props
 
 | Prop Name        | Type                  | Default Value | Description                                                 |
 | ---------------- | --------------------- | ------------- | ----------------------------------------------------------- |
+| `width`          | `string`              | `"100%"`      | The width value of the container.                           |
+| `height`         | `string`              | `"100%"`      | The height value of the container.                          |
 | `animation`      | `string`              | `"pulse"`     | The type of animation to apply (`PULSE` or `WAVE`).         |
 | `numRows`        | `number`              | `1`           | The number of animated rows to display.                     |
 | `customRows`     | `CustomRow[]`         | `[]`          | Array to define custom dimensions for specific rows.        |
